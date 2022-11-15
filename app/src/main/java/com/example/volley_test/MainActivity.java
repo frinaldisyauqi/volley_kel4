@@ -46,11 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject kecamatan = jsonArray.getJSONObject(i);
-
-                    int id = kecamatan.getInt("id");
                     String nama = kecamatan.getString("nama");
 
-                    mTextViewResult.append(id + " " + nama + "\n\n");
+                    mTextViewResult.append( "Kecamatan : " + nama + "\n\n");
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
